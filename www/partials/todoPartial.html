@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Todo App</h1>
+      <form 
+        name="newTaskForm" 
+        class="form-horizontal" 
+        ng-submit="viewmodel.addTask()"
+        style="padding-bottom: 20px; border-bottom: 1px solid #bbbbbb; margin-bottom: 30px;"
+        novalidate
+      >
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Add todo task here" ng-model="viewmodel.newTaskDescription" required />
+          <span class="text-muted" ng-show="newTaskForm.$error.required">Empty task is not allowed</span>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" ng-disabled="newTaskForm.$invalid">Submit</button>
+        </div>
+      </form>  
+      <input type="search" class="form-control" placeholder="Search your task" />
+      <table class="table table-hover">
+        <tr ng-repeat="task in viewmodel.tasks | orderBy:'-createdAt'">
+          <td class="col-md-10">{{task.description}}</td>
+          <td class="col-md-1 col-md-offset-1"><a href="" ng-click="viewmodel.deleteTask(task.id)"><i class="fa fa-times"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

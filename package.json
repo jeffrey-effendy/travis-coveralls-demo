@@ -1,0 +1,29 @@
+{
+  "name": "angular-node-ci-sample",
+  "version": "1.0.0",
+  "description": "A todo sample to do CI with Node and Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "keywords": [
+    "angular",
+    "travis",
+    "node"
+  ],
+  "author": "Jeffrey Effendy",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "~4.13.4",
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-notify": "^2.2.0",
+    "jasmine": "~2.4.1",
+    "mysql": "~2.10.2",
+    "bluebird": "^3.1.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2"
+  }
+}

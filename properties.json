@@ -1,0 +1,13 @@
+{
+  "web": {
+    "port": 39467
+  },
+  "datasource": {
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "root",
+    "database": "localdb",
+    "table": "todos",
+    "testtable": "todos_test"
+  }
+}
