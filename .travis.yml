@@ -11,8 +11,10 @@ matrix:
 env:
   - NODE_ENV=test
  
+install:
+  - npm install
+ 
 before_script:
   - npm install -g bower
-  - npm install
   - bower install
   - "npm start &"
