@@ -5,11 +5,15 @@
       viewmodel.tasks = [];
       viewmodel.newTaskDescription = "";
       viewmodel.addTask = function() {
-        modelService.addOneTask(viewmodel.tasks, viewmodel.newTaskDescription);
+        modelService.addOneTask(viewmodel.tasks, viewmodel.newTaskDescription).then(function(tasks) {
+          viewmodel.tasks = tasks;
+        });
         viewmodel.newTaskDescription  = "";
       };
       viewmodel.deleteTask = function(id) {
-        modelService.deleteOneTask(viewmodel.tasks, id);
+        viewmodel.tasks = modelService.deleteOneTask(viewmodel.tasks, id).then(function(tasks) {
+          viewmodel.tasks = tasks;
+        });
       }
       $http({
         method: 'GET',

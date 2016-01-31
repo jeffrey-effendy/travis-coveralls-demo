@@ -3,7 +3,7 @@ var nodemon = require('gulp-nodemon');
 var notify = require('gulp-notify');
 var livereload = require('gulp-livereload');
 
-gulp.task('watcher', function() {
+gulp.task('watch', function() {
   livereload.listen();
   nodemon({
     script: 'index.js',

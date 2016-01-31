@@ -25,6 +25,7 @@
     "jquery": "^2.2.0",
     "bootstrap": "^3.3.6",
     "angular-route": "^1.4.9",
+    "angular-mocks": "^1.4.9",
     "font-awesome": "^4.5.0"
   }
 }

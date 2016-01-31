@@ -1,11 +1,11 @@
 var Connection = require('../connection');
-var Properties = require('../../properies');
+var Properties = require('../../properties');
 
 var env = process.env.NODE_ENV || 'development';
 var table = env === 'test' ? Properties.datasource.testtable : Properties.datasource.table; 
 
 module.exports.fetchOne = function(id, cb, errcb) {
-  var statement = "SELECT " + table + " FROM todos WHERE id=" + id + " limit 1;";
+  var statement = "SELECT * FROM " + table + " WHERE id=" + id + " limit 1;";
   return Connection.query(statement, function(rows, fields) {
     cb(rows, fields);
   }, function(err) {

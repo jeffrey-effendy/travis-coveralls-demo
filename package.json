@@ -4,7 +4,8 @@
   "description": "A todo sample to do CI with Node and Angular",
   "main": "index.js",
   "scripts": {
-    "test": "node index"
+    "start": "./node_modules/.bin/gulp watch",
+    "test": "karma start test/karma.conf.js"
   },
   "keywords": [
     "angular",
@@ -14,16 +15,18 @@
   "author": "Jeffrey Effendy",
   "license": "ISC",
   "devDependencies": {
+    "body-parser": "^1.14.2",
     "express": "~4.13.4",
     "gulp": "^3.9.0",
     "gulp-livereload": "^3.8.1",
     "gulp-nodemon": "^2.0.6",
     "gulp-notify": "^2.2.0",
-    "jasmine": "~2.4.1",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.6",
     "mysql": "~2.10.2",
-    "bluebird": "^3.1.5"
-  },
-  "dependencies": {
-    "body-parser": "^1.14.2"
+    "request": "^2.69.0"
   }
 }
