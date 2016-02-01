@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp watch",
-    "test": "karma start test/karma.conf.js --single-run",
+    "test": "karma start test/karma.conf.js",
     "ci": "npm test && codecov < coverage/cobertura/cobertura-coverage.xml"
   },
   "keywords": [
