@@ -24,7 +24,7 @@ describe("modelService", function() {
       ]
     });
     service.addOneTask(mockTasks, "test").then(function(res){
-      expect(res.length).toBe(1);
+      expect(res.length).toBe(2);
       expect(res[0].description).toBe("first");
       expect(res[1].description).toBe("test");
     });
