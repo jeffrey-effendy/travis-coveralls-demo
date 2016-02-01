@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/.bin/gulp watch",
     "test": "karma start test/karma.conf.js --single-run",
-    "ci": "npm start && codecov &lt; coverage/cobertura/cobertura-coverage.xml"
+    "ci": "npm start && codecov < coverage/cobertura/cobertura-coverage.xml"
   },
   "keywords": [
     "angular",
