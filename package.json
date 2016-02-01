@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./node_modules/.bin/gulp watch",
     "test": "karma start test/karma.conf.js",
-    "ci": "npm test && codecov < coverage/cobertura/cobertura-coverage.xml"
+    "ci": "npm test && codecov < coverage/cobertura/cobertura-coverage.xml",
+    "codecov": "cat coverage/*/lcov.info | codecov"
   },
   "keywords": [
     "angular",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "body-parser": "^1.14.2",
     "codecov": "^1.0.1",
+    "codecov.io": "^0.1.6",
     "express": "~4.13.4",
     "gulp": "^3.9.0",
     "gulp-livereload": "^3.8.1",
