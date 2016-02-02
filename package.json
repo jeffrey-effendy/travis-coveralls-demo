@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp watch",
-    "test": "./node_modules/.bin/gulp",
-    "codecov": "cat coverage/*/lcov.info | codecov"
+    "test": "./node_modules/.bin/gulp"
   },
   "keywords": [
     "angular",
