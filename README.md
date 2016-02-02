@@ -3,8 +3,11 @@
 
 # Demo CI using Travis
 
-Frameworks used: 
-- Testing: Jasmine
+Frameworks used:
+- Database: MySQL 5.6
+- Build Runner: Gulp
+- Backend Testing: Mocha + Chai
+- Frontend Testing: Jasmine
 - Test Runner: Karma
 - Coverage: Istanbul
 - Coverage Reporter: Codecov
