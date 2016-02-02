@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp watch",
-    "test": "karma start test/karma.conf.js",
+    "test": "./node_modules/.bin/gulp",
     "codecov": "cat coverage/*/lcov.info | codecov"
   },
   "keywords": [
@@ -17,18 +17,21 @@
   "license": "ISC",
   "devDependencies": {
     "body-parser": "^1.14.2",
-    "codecov": "^1.0.1",
+    "chai": "^3.5.0",
     "codecov.io": "^0.1.6",
     "express": "~4.13.4",
     "gulp": "^3.9.0",
+    "gulp-codecov": "^2.0.1",
+    "gulp-istanbul": "^0.10.3",
     "gulp-livereload": "^3.8.1",
+    "gulp-mocha": "^2.2.0",
     "gulp-nodemon": "^2.0.6",
     "gulp-notify": "^2.2.0",
-    "jasmine": "^2.4.1",
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-coverage": "^0.5.3",
-    "karma-jasmine": "^0.3.6",
+    "karma-jasmine": "^0.3.7",
+    "lcov-result-merger": "^1.0.2",
     "mysql": "~2.10.2",
     "request": "^2.69.0"
   }

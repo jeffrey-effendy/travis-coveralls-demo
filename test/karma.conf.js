@@ -24,13 +24,7 @@ module.exports = function(config) {
       '../www/controllers/*.js',
       '../www/services/*.js',
       // test
-      'angular/*.js',
-      'api/*.js'
-    ],
-
-
-    // list of files to exclude
-    exclude: [
+      'frontend/*.js'
     ],
 
 
@@ -49,11 +43,10 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
      
     coverageReporter: {
-      dir: 'coverage/',
+      dir: 'coverage/jasmine/',
       reporters: [
         { type: 'html', subdir: 'html' },
-        { type: 'lcovonly', subdir: 'lcov' },
-        { type: 'cobertura', subdir: 'cobertura' }
+        { type: 'lcov', subdir: 'lcov' }
       ]
     },
     
@@ -77,7 +70,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'ChromeCanary'],
+    browsers: ['Chrome'],
     
     customLaunchers: {
       Chrome_travis_ci: {
@@ -85,11 +78,6 @@ module.exports = function(config) {
         flags: ['--no-sandbox']
       }
     },
-    
-
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous

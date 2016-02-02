@@ -9,6 +9,8 @@ var db = Mysql.createConnection({
 });
 
 module.exports.query = function(statement, cb, errcb) {
+  cb = cb || function(row, fields){};
+  errcb = errcb || function(err){};
   db.query(statement, function(err, rows, fields) {
     if(err) {
       errcb(err);

@@ -1,7 +1,7 @@
 var Connection = require('../connection');
 var Properties = require('../../properties');
 
-var env = 'development';
+var env = process.env.NODE_ENV;
 var table = env === 'test' ? Properties.datasource.testtable : Properties.datasource.table; 
 
 module.exports.fetchOne = function(id, cb, errcb) {
