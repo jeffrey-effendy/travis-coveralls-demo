@@ -25,6 +25,3 @@ before_install:
   - mysql -e "create database if not exist localdb;" -uroot
   
 script: npm test
-
-after_success:
-  - npm run codecov
