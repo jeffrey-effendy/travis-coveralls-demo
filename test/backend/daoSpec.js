@@ -21,11 +21,11 @@ describe('todoDao', function() {
     console.log("test database is removed");
   });
   
-//  it('should start with one data with the right description', function() {
-//    Todo.fetchAll(function(rows, fields) {
-//      expect(rows.length).to.equal(1);
-//      expect(rows[0].description).to.equal(initDesc);
-//    });
-//  });
+  it('should start with one data with the right description', function() {
+    Todo.fetchAll(function(rows, fields) {
+      expect(rows.length).to.equal(1);
+      expect(rows[0].description).to.equal(initDesc);
+    });
+  });
   
 });
